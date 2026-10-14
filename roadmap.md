@@ -6,4 +6,4 @@
 - [x] Update corporate navigation, hero, Nosotros benefits and dark footer while preserving the wizard.
 - [x] Verify navigation, responsive layouts and the complete application flow.
 - [ ] Add the actual footer contact email — awaiting the company's confirmed address.
-- [ ] Align corporate colors with the uploaded email signature and verify the result.
+- [x] Align corporate colors with the uploaded email signature and verify the result.
