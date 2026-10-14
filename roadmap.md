@@ -7,4 +7,4 @@
 - [x] Verify navigation, responsive layouts and the complete application flow.
 - [ ] Add the actual footer contact email — awaiting the company's confirmed address.
 - [x] Align corporate colors with the uploaded email signature and verify the result.
-- [ ] Extract the uploaded original logo, replace the text logo and update the favicon.
+- [x] Extract the uploaded original logo, replace the text logo and update the favicon.
