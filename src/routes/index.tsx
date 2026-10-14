@@ -4,8 +4,10 @@ import { ArrowRight, ChartNoAxesCombined, Check, Clock3, HeartHandshake, LockKey
 import { Button } from "@/components/ui/button";
 import { ApplicationWizard } from "@/components/application-wizard";
 import heroPhoto from "@/assets/work-planner-hero.jpg";
-import logoWhiteAsset from "@/assets/work-planner-logo-white.png.asset.json";
-import logoIconAsset from "@/assets/work-planner-icon.png.asset.json";
+
+// Logos served from /public so they work on any host (Lovable, Vercel, etc.).
+const logoWhiteUrl = "/work-planner-logo-white.png";
+const logoIconUrl = "/work-planner-icon.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -21,9 +23,9 @@ export const Route = createFileRoute("/")({
 
 function Brand({ tone }: { tone?: "footer" }) {
   if (tone === "footer") {
-    return <a href="#inicio" className="brand brand-image" aria-label="Work Planner, inicio"><img src={logoWhiteAsset.url} width={179} height={202} alt="Work Planner" /></a>;
+    return <a href="#inicio" className="brand brand-image" aria-label="Work Planner, inicio"><img src={logoWhiteUrl} width={179} height={202} alt="Work Planner" /></a>;
   }
-  return <a href="#inicio" className="brand brand-lockup" aria-label="Work Planner, inicio"><img src={logoIconAsset.url} width={165} height={128} alt="" /><span className="brand-wordmark"><span className="brand-work">WORK</span><span className="brand-planner">PLANNER</span></span></a>;
+  return <a href="#inicio" className="brand brand-lockup" aria-label="Work Planner, inicio"><img src={logoIconUrl} width={165} height={128} alt="" /><span className="brand-wordmark"><span className="brand-work">WORK</span><span className="brand-planner">PLANNER</span></span></a>;
 }
 
 type Theme = "light" | "dark";
