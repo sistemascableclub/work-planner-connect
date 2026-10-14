@@ -1,4 +1,5 @@
 # Work Planner
+- [ ] Reduce excessive side margins on wide screens and verify domain-compatible assets for the GitHub → Vercel publication workflow.
 - [x] Create mobile-first brand design and photo-led recruitment page.
 - [x] Implement three-step application wizard with validation and CV selection.
 - [x] Verify wizard flow and mobile layout.

@@ -15,3 +15,4 @@
 - The application wizard is frontend-only and must not claim applications were sent or saved until a real submission service is connected.
 - Define brand styling in the global semantic design system and use shared Button variants for interactive commands to keep the mobile experience consistent.
 - Pre-optimize direct landing-page dependencies and reject outdated optimizer requests in Vite; mixed cached React generations can otherwise leave hook dispatchers null during preview updates.
+- Keep brand logos as repository-owned public assets with host-relative paths; the GitHub → Vercel → custom-domain deployment must not depend on Lovable-only asset endpoints.

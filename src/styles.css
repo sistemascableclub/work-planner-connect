@@ -218,6 +218,12 @@
 .footer-right { display: flex; align-items: center; gap: 24px; font-size: 10px; color: var(--muted-foreground); }
 .footer-right span { display: inline-flex; align-items: center; gap: 6px; }
 @keyframes reveal { from { opacity: 0; transform: translateY(5px); } to { opacity: 1; transform: translateY(0); } }
+@media(min-width:1440px) {
+  .container { width: min(1600px, calc(100% - 96px)); }
+  .about-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .about-copy > p { max-width: 590px; }
+  .application-layout { grid-template-columns: minmax(0, 1fr) minmax(0, 850px); }
+}
 @media(max-width:1023px) {
   .about-layout { gap: 36px; }
   .about-copy h2 { font-size: 28px; }
