@@ -1,4 +1,5 @@
 # Work Planner
+- [ ] Remove the remaining capped desktop side margins and verify the hero and application access across screen widths.
 - [x] Reduce excessive side margins on wide screens and verify domain-compatible assets for the GitHub → Vercel publication workflow.
 - [x] Create mobile-first brand design and photo-led recruitment page.
 - [x] Implement three-step application wizard with validation and CV selection.
