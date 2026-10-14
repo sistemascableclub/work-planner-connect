@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { ArrowRight, ChartNoAxesCombined, Check, Clock3, HeartHandshake, LockKeyhole, Mail, MapPin, Megaphone, ShieldCheck, Sparkles, Target, TrendingUp, UsersRound } from "lucide-react";
+import { useEffect, useState } from "react";
+import { ArrowRight, ChartNoAxesCombined, Check, Clock3, HeartHandshake, LockKeyhole, Mail, MapPin, Megaphone, Moon, ShieldCheck, Sparkles, Sun, Target, TrendingUp, UsersRound } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ApplicationWizard } from "@/components/application-wizard";
 import heroPhoto from "@/assets/work-planner-hero.jpg";
@@ -25,11 +26,28 @@ function Brand({ tone }: { tone?: "footer" }) {
   return <a href="#inicio" className="brand brand-lockup" aria-label="Work Planner, inicio"><img src={logoIconAsset.url} width={165} height={128} alt="" /><span className="brand-wordmark"><span className="brand-work">WORK</span><span className="brand-planner">PLANNER</span></span></a>;
 }
 
+type Theme = "light" | "dark";
+
+function ThemeToggle() {
+  const [theme, setTheme] = useState<Theme>("light");
+  useEffect(() => {
+    const stored = localStorage.getItem("wp-theme");
+    setTheme(stored === "light" || stored === "dark" ? stored : window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  }, []);
+  function toggle() {
+    const next: Theme = theme === "dark" ? "light" : "dark";
+    setTheme(next);
+    document.documentElement.classList.toggle("dark", next === "dark");
+    try { localStorage.setItem("wp-theme", next); } catch { /* storage unavailable */ }
+  }
+  return <button type="button" className="theme-toggle" onClick={toggle} aria-label={theme === "dark" ? "Activar modo claro" : "Activar modo oscuro"}>{theme === "dark" ? <Sun /> : <Moon />}</button>;
+}
+
 function Index() {
   function startApplication() { document.getElementById("postulacion")?.scrollIntoView({ behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth", block: "start" }); }
   return (
     <>
-      <header className="site-header"><div className="container header-inner"><Brand /><nav className="header-right" aria-label="Navegación principal"><div className="nav-links"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a></div><Button variant="sunshine" size="touch" onClick={startApplication}>Trabaja con Nosotros <ArrowRight /></Button></nav></div></header>
+      <header className="site-header"><div className="container header-inner"><Brand /><nav className="header-right" aria-label="Navegación principal"><div className="nav-links"><a href="#inicio">Inicio</a><a href="#nosotros">Nosotros</a></div><ThemeToggle /><Button variant="sunshine" size="touch" onClick={startApplication}>Trabaja con Nosotros <ArrowRight /></Button></nav></div></header>
       <main>
         <section className="hero" id="inicio" aria-labelledby="hero-title">
           <img className="hero-photo" src={heroPhoto} width={1920} height={1024} alt="Profesionales de Ventas y Marketing colaborando en una oficina luminosa" fetchPriority="high" />

@@ -95,6 +95,11 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700;750&family=Manrope:wght@400;500;600;650;700;750;800&display=swap" },
     ],
+    scripts: [
+      {
+        children: `try { var stored = localStorage.getItem("wp-theme"); var dark = stored ? stored === "dark" : window.matchMedia("(prefers-color-scheme: dark)").matches; if (dark) document.documentElement.classList.add("dark"); } catch (e) {}`,
+      },
+    ],
   }),
   shellComponent: RootShell,
   component: RootComponent,
