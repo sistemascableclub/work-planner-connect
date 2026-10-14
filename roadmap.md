@@ -9,3 +9,4 @@
 - [x] Align corporate colors with the uploaded email signature and verify the result.
 - [x] Extract the uploaded original logo, replace the text logo and update the favicon.
 - [x] Show the logo in solid white with no background in the footer and verify header and footer rendering.
+- [x] Place the icon beside a WORK (black) / PLANNER (fuchsia) wordmark in the header and verify desktop and mobile.

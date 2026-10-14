@@ -69,6 +69,11 @@
 .brand-image { align-items: center; flex-shrink: 0; }
 .brand-image img { height: 68px; width: auto; display: block; object-fit: contain; }
 .footer .brand-image img { height: 74px; }
+.brand-lockup { gap: 11px; align-items: center; }
+.brand-lockup img { height: 46px; width: auto; display: block; }
+.brand-wordmark { display: flex; flex-direction: column; line-height: 1; }
+.brand-work { font-size: 25px; font-weight: 800; letter-spacing: 0.01em; color: var(--foreground); }
+.brand-planner { font-size: 13px; font-weight: 700; letter-spacing: 0.3em; color: var(--primary); margin-top: 5px; }
 .header-right { display: flex; align-items: center; gap: 30px; }
 .header-tagline { font-size: 13px; color: var(--muted-foreground); }
 .header-right svg { width: 15px; }
@@ -204,6 +209,9 @@
   .nav-links a { font-size: 12px; }
   .brand { font-size: 21px; gap: 6px; }
   .brand-image img { height: 62px; }
+  .brand-lockup img { height: 38px; }
+  .brand-work { font-size: 20px; }
+  .brand-planner { font-size: 11px; letter-spacing: 0.24em; margin-top: 4px; }
   .header-tagline { display: none; }
   .header-right button { height: 37px; font-size: 11px; padding-inline: 12px; }
   .hero { min-height: 605px; align-items: flex-start; }
