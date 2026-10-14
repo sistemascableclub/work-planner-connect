@@ -66,6 +66,10 @@
 .brand { display: inline-flex; gap: 8px; align-items: baseline; font-family: var(--font-display); font-size: 26px; font-weight: 800; color: var(--primary); text-decoration: none; }
 .brand strong { color: var(--foreground); font-weight: 800; }
 .brand-dot { width: 7px; height: 7px; background: var(--highlight); border-radius: 2px; align-self: center; margin-top: 10px; margin-left: -4px; }
+.brand-image { align-items: center; flex-shrink: 0; }
+.brand-image img { height: 68px; width: auto; display: block; object-fit: contain; }
+.footer .brand-image { background: var(--background); border-radius: 4px; padding: 8px 12px; }
+.footer .brand-image img { height: 74px; }
 .header-right { display: flex; align-items: center; gap: 30px; }
 .header-tagline { font-size: 13px; color: var(--muted-foreground); }
 .header-right svg { width: 15px; }
@@ -200,6 +204,7 @@
   .nav-links { gap: 22px; }
   .nav-links a { font-size: 12px; }
   .brand { font-size: 21px; gap: 6px; }
+  .brand-image img { height: 62px; }
   .header-tagline { display: none; }
   .header-right button { height: 37px; font-size: 11px; padding-inline: 12px; }
   .hero { min-height: 605px; align-items: flex-start; }

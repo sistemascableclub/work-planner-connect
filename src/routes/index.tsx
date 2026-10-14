@@ -3,6 +3,7 @@ import { ArrowRight, ChartNoAxesCombined, Check, Clock3, HeartHandshake, LockKey
 import { Button } from "@/components/ui/button";
 import { ApplicationWizard } from "@/components/application-wizard";
 import heroPhoto from "@/assets/work-planner-hero.jpg";
+import logoAsset from "@/assets/work-planner-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({ meta: [
@@ -17,7 +18,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Brand() {
-  return <a href="#inicio" className="brand" aria-label="Work Planner, inicio">work<strong>planner</strong><span className="brand-dot" /></a>;
+  return <a href="#inicio" className="brand brand-image" aria-label="Work Planner, inicio"><img src={logoAsset.url} width={179} height={202} alt="Work Planner" /></a>;
 }
 
 function Index() {
