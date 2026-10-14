@@ -3,7 +3,6 @@ import { ArrowRight, ChartNoAxesCombined, Check, Clock3, HeartHandshake, LockKey
 import { Button } from "@/components/ui/button";
 import { ApplicationWizard } from "@/components/application-wizard";
 import heroPhoto from "@/assets/work-planner-hero.jpg";
-import logoAsset from "@/assets/work-planner-logo.png.asset.json";
 import logoWhiteAsset from "@/assets/work-planner-logo-white.png.asset.json";
 import logoIconAsset from "@/assets/work-planner-icon.png.asset.json";
 
