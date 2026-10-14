@@ -8,3 +8,4 @@
 - [ ] Add the actual footer contact email — awaiting the company's confirmed address.
 - [x] Align corporate colors with the uploaded email signature and verify the result.
 - [x] Extract the uploaded original logo, replace the text logo and update the favicon.
+- [x] Show the logo in solid white with no background in the footer and verify header and footer rendering.
